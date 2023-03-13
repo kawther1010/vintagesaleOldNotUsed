@@ -1,0 +1,90 @@
+<!-- Declare the document type and start the HTML document -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Set the character encoding and link to the stylesheet -->
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="\assets\css\headerin.css" />
+    </head>
+    <body class="home">
+        <!-- The page header with logo, navigation, and search box -->
+        <header>
+            <a href="#" class="logo" target="_blank">
+                <img src="assets/vintagesale.png" alt="" />
+            </a>
+            <div class="group">
+                <ul class="navigation">
+                    <li><a href="/homein/profile/sellPage">Sell</a></li>
+                    <li><a href="/homein/profile">Profile</a></li>
+                    <li><a href="/homein/logout">Logout</a></li>
+                </ul>
+                <div class="search">
+                    <!-- The search icon with search and close buttons -->
+                    <span class="icon">
+                        <ion-icon
+                            name="search-outline"
+                            class="searchBtn"
+                        ></ion-icon>
+                        <ion-icon
+                            name="close-outline"
+                            class="closeBtn"
+                        ></ion-icon>
+                    </span>
+                </div>
+                <!-- The hamburger menu icon for mobile devices -->
+                <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+            </div>
+            <!-- The search box that appears when the search icon is clicked -->
+            <div class="searchBox">
+                <input type="text" placeholder="Search here . . ." />
+            </div>
+        </header>
+
+        <!-- Include the Ionicons library as an ES module for modern browsers -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <!-- Include the Ionicons library as a legacy script for older browsers -->
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+
+        <!-- Add interactivity to the page with JavaScript -->
+        <script>
+            // Get references to the search and menu toggle icons, search box, and navigation menu
+            let searchBtn = document.querySelector(".searchBtn");
+            let closeBtn = document.querySelector(".closeBtn");
+            let searchBox = document.querySelector(".searchBox");
+            let navigation = document.querySelector(".navigation");
+            let menuToggle = document.querySelector(".menuToggle");
+            let header = document.querySelector("header");
+
+            // When the search icon is clicked, show the search box and hide the menu toggle and navigation menu
+            searchBtn.onclick = function () {
+                searchBox.classList.add("active");
+                closeBtn.classList.add("active");
+                searchBtn.classList.add("active");
+                menuToggle.classList.add("hide");
+                header.classList.remove("open");
+            };
+
+            // When the close button is clicked, hide the search box and show the menu toggle
+            closeBtn.onclick = function () {
+                searchBox.classList.remove("active");
+                closeBtn.classList.remove("active");
+                searchBtn.classList.remove("active");
+                menuToggle.classList.remove("hide");
+            };
+
+            // When the menu toggle icon is clicked, toggle the "open" class on the header to show or hide the navigation menu
+            menuToggle.onclick = function () {
+                header.classList.toggle("open");
+                searchBox.classList.remove("active");
+                closeBtn.classList.remove("active");
+                searchBtn.classList.remove("active");
+            };
+        </script>
+    </body>
+</html>

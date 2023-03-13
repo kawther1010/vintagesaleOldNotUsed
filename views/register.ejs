@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta tags for the web page -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Stylesheet link for the web page -->
+        <link rel="stylesheet" href="assets/css/style-login-signup.css" />
+
+        <!-- Title of the web page -->
+        <title>Vintagesale | Sign-up</title>
+    </head>
+    <body>
+        <!-- Vintagesale logo -->
+        <a href="#" class="logo" target="_blank">
+            <img src="assets/vintagesale.png" alt="" />
+        </a>
+        <section>
+            <main>
+                <div class="form-value">
+                    <!-- Registration form -->
+                    <form action="/register" method="POST">
+                        <h2>Sign-up</h2>
+                        <!-- First name input field -->
+                        <div class="inputbox">
+                            <input
+                                type="text"
+                                name="firstName"
+                                required
+                                autocomplete="off"
+                            />
+                            <label for="">Your First Name</label>
+                        </div>
+                        <!-- Last name input field -->
+                        <div class="inputbox">
+                            <input
+                                type="text"
+                                name="lastName"
+                                required
+                                autocomplete="off"
+                            />
+                            <label for="">Your Last Name</label>
+                        </div>
+                        <!-- Email input field -->
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input
+                                type="email"
+                                name="email"
+                                required
+                                autocomplete="off"
+                            />
+                            <label for="">Your E-mail</label>
+                        </div>
+                        <!-- Phone number input field -->
+                        <div class="inputbox">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <input
+                                type="tel"
+                                name="phoneNumber"
+                                required
+                                autocomplete="off"
+                            />
+                            <label for="">Your Phone Number</label>
+                        </div>
+                        <!-- Password input field -->
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input
+                                type="password"
+                                name="password"
+                                id="password-input"
+                                required
+                            />
+                            <label for="">Your Password</label>
+                        </div>
+                        <!-- Confirm password input field -->
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input
+                                type="password"
+                                name="confirmPassword"
+                                required
+                            />
+                            <label for="">Repeat Your Password</label>
+                        </div>
+                        <!-- Submit button for the registration form -->
+                        <button class="button-style" type="submit">
+                            Sign-up
+                        </button>
+                        <!-- Link to the login page for users who already have an account -->
+                        <div class="register">
+                            <p>
+                                You already have an account?
+                                <a href="/login">Log-in</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </main>
+        </section>
+        <!-- Ionicons script for icon support -->
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>
