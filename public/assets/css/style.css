@@ -1,0 +1,49 @@
+html,
+body {
+    height: 100%;
+}
+.first__txt {
+    background-color: #212529;
+    color: #ffffff;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+}
+.product__img {
+    height: 100%;
+    width: 100%;
+}
+/* register and login page */
+.miniinput {
+    width: 17.3vw;
+}
+.fullinput {
+    width: 35vw;
+}
+
+.card {
+    box-sizing: border-box;
+    width: 100px;
+    height: 250px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
