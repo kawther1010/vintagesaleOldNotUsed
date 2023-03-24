@@ -87,7 +87,7 @@ const postregister = async (req, res) => {
         return res.cookie("token", token, {
             httpOnly: true,
             secure: true,
-        }).status(201).redirect('homepage');
+        }).status(201).redirect('homein');
 
     } catch (err) {
         console.error(err);

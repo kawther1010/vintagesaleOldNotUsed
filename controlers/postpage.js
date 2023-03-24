@@ -19,13 +19,14 @@ const postObject = (req, res) => {
         try {
             // Create a new Object with the given properties
             let newObject = await new Object({
-                seller: userEmail._id,
+                //seller: userEmail._id,
+                seller:req.cookies.email,
                 title: req.body.title,
                 description: req.body.description,
-                image: req.body.image,
+                //image: req.body.image,
                 startingPrice: req.body.startingPrice,
                 endDate: req.body.endDate,
-
+                sold: req.body.sold,
             });
             // Save the new Object to the database
             await newObject.save();
