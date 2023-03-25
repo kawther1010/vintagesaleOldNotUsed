@@ -22,6 +22,7 @@ const postObject = (req, res) => {
                 //seller: userEmail._id,
                 seller:req.cookies.email,
                 title: req.body.title,
+                category: req.body.category,
                 description: req.body.description,
                 //image: req.body.image,
                 startingPrice: req.body.startingPrice,

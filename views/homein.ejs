@@ -10,7 +10,7 @@
     </head>
     <body>
         <%- include('./includes/headerin') -%>
-        <br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>
         <h2 class="text-center">VintageSale is your dear home.</h2>
         <br/><br/><br/>
 
@@ -18,11 +18,20 @@
             <div class="row">
                 <% objectList.forEach(Object => {%>
                 <div class="col-md-3 border m-5 p-2 text-center">
+                    <br>
+                    <h5>AN IMAGE WILL APPEAR HERE</h5>
+                    <br>
+                    <p>Seller: <%= Object.seller %></p>
                     <p>Title: <%= Object.title %></p>
+                    <p>Category: <%= Object.category %></p>
+                    <p>Starting price: <%= Object.startingPrice %></p>
+                    <p>End date: <%= Object.endDate %></p>
+                    <p>sold: <%= Object.sold %></p>
                     <p>Description: <%= Object.description %></p>
                     <button class="btn">
                         <a class="btn btn-outline-dark" href="/homein/:id">see more</a>
                     </button>
+                    <br><br>
                 </div>
                 <% }) %>
             </div>

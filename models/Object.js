@@ -17,6 +17,12 @@ const objectSchema = new Schema({
         minlength: 5,
         maxlength: 100,
     },
+    category:{
+        type: String,
+        required: true,
+        minlength: 5,
+        maxlength: 100,
+    },
     // The description of the object.
     description: {
         type: String,
